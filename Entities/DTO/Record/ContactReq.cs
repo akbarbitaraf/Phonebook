@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EmployeePanelServices.Entities.Enums;
+using Entities.DB;
+using Phonebook.Entities.DTO.Record;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +11,12 @@ namespace Entities.DTO.Record
 {
     public record ContactReq
     {
-        public int ID { get; set; }
-        public string Name { get; set; }    
+        public string Name { get; set; }   
+        public string Family { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }
-        public string PhoneNumber { get; set; }
+        public List<PhoneDTO> PhoneNumber { get; set; }
         public string Address { get; set; }
-        public string ContactType { get; set; }
+        public int  ContactType { get; set; }
 
     }
 }

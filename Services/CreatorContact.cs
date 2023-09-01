@@ -11,13 +11,13 @@ namespace Services
    public class CreatorContact : ICreatorContact
     {
   
-        public  IContact CreatorConstructor(string type)
+        public  IContact CreatorConstructor(int type)
         {
             switch (type)
             {
-                case "Essential": return new EssentialContacts();
-                case "Normal": return new NormalContacts();
-                case "Relief": return new ReliefContacts();
+                case 0: return new EssentialContacts();
+                case 1: return new NormalContacts();
+                case 2: return new ReliefContacts();
                 default :throw new Exception();
 
             }

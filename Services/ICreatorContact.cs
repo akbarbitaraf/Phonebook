@@ -9,7 +9,7 @@ namespace Services
 {
      public interface ICreatorContact
     {
-        public  IContact CreatorConstructor(string type); 
+        public  IContact CreatorConstructor(int type); 
         
     }
 }

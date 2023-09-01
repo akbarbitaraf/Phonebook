@@ -1,11 +1,13 @@
-﻿using Entities.DTO.Record;
+﻿using Entities.DB;
+using Entities.DTO.Record;
 using Services.Interfaces;
 
 namespace Services.Services
 {
     public class NormalContacts : IContact
     {
-        public async Task<ContactRes> CreateContact(ContactReq contactReq)
+
+        public async Task<ContactRes> CreateContact(Contacts contactReq)
         {
             throw new NotImplementedException();
         }
@@ -25,7 +27,7 @@ namespace Services.Services
             throw new NotImplementedException();
         }
 
-        public async Task<ContactRes> UpdateContact(ContactReq contactReq)
+        public async Task<ContactRes> UpdateContact(Contacts contactReq)
         {
             throw new NotImplementedException();
         }

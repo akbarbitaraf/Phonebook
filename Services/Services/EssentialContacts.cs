@@ -1,13 +1,30 @@
-﻿using Entities.DTO.Record;
+﻿using Entities.DB;
+using Entities.DTO.Record;
+using Repositories;
 using Services.Interfaces;
 
 namespace Services.Services
 {
     public class EssentialContacts : IContact
     {
-        public async Task<ContactRes> CreateContact(ContactReq contactReq)
+        private readonly PhoneBookContext _phoneBookContext; 
+        public EssentialContacts(PhoneBookContext phoneBookContext)
+        {
+            _phoneBookContext = phoneBookContext;
+
+        }
+        public async Task<ContactRes> CreateContact(Contacts contactReq)
         {
             throw new NotImplementedException();
+
+
+            //await _phoneBookContext.Contacts.AddAsync(contactReq);
+            //await _phoneBookContext.SaveChangesAsync();
+
+
+            //return new ContactRes();
+
+
         }
 
         public async Task<ContactRes> DeleteContact(int contactId)
@@ -25,7 +42,7 @@ namespace Services.Services
             throw new NotImplementedException();
         }
 
-        public async Task<ContactRes> UpdateContact(ContactReq contactReq)
+        public async Task<ContactRes> UpdateContact(Contacts contactReq)
         {
             throw new NotImplementedException();
         }

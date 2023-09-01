@@ -12,8 +12,8 @@ namespace Services.Interfaces
     public interface IContact
     {
 
-        public Task<ContactRes> CreateContact(ContactReq contactReq); 
-        public Task<ContactRes> UpdateContact(ContactReq contactReq);
+        public Task<ContactRes> CreateContact(Contacts contactReq); 
+        public Task<ContactRes> UpdateContact(Contacts contactReq);
         public Task<ContactRes> DeleteContact(int contactId);
         public Task<ContactRes> GetContact(int contactId);
         public Task<ContactRes> GetContacts();
